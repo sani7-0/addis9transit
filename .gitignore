@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.env
+.env.*
+*.log
+logs/
+coverage/
+.vscode/
+.idea/
+.DS_Store
+*.tsbuildinfo
+test-websocket*.ts
