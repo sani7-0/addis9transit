@@ -239,7 +239,6 @@ export class StopsService {
       .innerJoin('st.trip', 'trip')
       .innerJoin('trip.route', 'route')
       .where('st.stop_id IN (:...stopIds)', { stopIds })
-      .andWhere('trip.is_active = :isActive', { isActive: true })
       .select([
         'route.route_id',
         'route.route_short_name',
