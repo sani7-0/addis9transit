@@ -78,11 +78,9 @@ async function bootstrap() {
     })
   );
 
-  // CORS configuration - allow all origins in development
+  // CORS configuration - allow all origins
   app.enableCors({
-    origin: isProduction 
-      ? configService.get<string>('CORS_ORIGIN', '').split(',').filter(Boolean)
-      : true, // Allow all origins in development
+    origin: true,
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
     credentials: true,
     allowedHeaders: 'Content-Type, Accept, Authorization, X-API-Key, Origin',

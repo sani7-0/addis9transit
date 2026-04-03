@@ -7,7 +7,7 @@ export class FindRoutesDto {
   @IsOptional()
   @IsInt()
   @Min(1)
-  @Max(1000)
+  @Max(5000)
   @Type(() => Number)
   limit?: number;
 
